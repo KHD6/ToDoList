@@ -20,7 +20,7 @@ function deleteToDo(event) {
     saveToDos()
 }
 
-function paintToDo(newTodo){
+function paintToDo(newTodo) {
     const li = document.createElement("li");
     li.id = newTodo.id;
     const p = document.createElement("p");
@@ -28,18 +28,8 @@ function paintToDo(newTodo){
     const button = document.createElement("button");
     button.innerText = "닫기"
     button.addEventListener("click", deleteToDo);
-    const date = new Date();
-    const yearText = String(date.getFullYear()).padStart(4, "0")
-    const monthText = String(date.getMonth()).padStart(2, "0")
-    const dateText = String(date.getDate()).padStart(2, "0")
-    const hoursText = String(date.getHours()).padStart(2, "0")
-    const minutesText = String(date.getMinutes()).padStart(2, "0")
-    let timeStmapText = `${yearText}.${monthText}.${dateText} / ${hoursText}:${minutesText}`
-    const span = document.createElement("span")
-    span.innerText = timeStmapText
     li.appendChild(p);
     li.appendChild(button);
-    li.appendChild(span);
     toDoList.appendChild(li);
 
 };
@@ -50,8 +40,7 @@ function handleToDoSubmit(event) {
     toDoInput.value = "";
     const newTodoObj = {
         id: Date.now(),
-        text:newTodo,
-        name:userNameText,
+        text: newTodo,
     }
     toDos.push(newTodoObj);
     paintToDo(newTodoObj);
@@ -66,7 +55,7 @@ function sayHello(item) {
 
 
 
-if(savedToDos !== null){
+if (savedToDos !== null) {
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
 }
