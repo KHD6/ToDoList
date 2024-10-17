@@ -21,16 +21,18 @@
 .background .img-box {
     height: 100%;
     position: relative;
-    animation: bgAnimation 30s infinite alternate ease-in-out;
+    overflow: hidden;
 }
 
 .background .img-box img {
     max-width: none;
+    width: auto;
+    height: 150%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: bgMoveAnimation 100s infinite alternate;
+    animation: bgMoveAnimation 60s infinite alternate;
 }
 
 /*background 끝*/
@@ -218,7 +220,7 @@ header .weather-box #weather span:nth-child(2) img {
     margin-bottom: 120px;
 }
 
-#todo-list li::after{
+#todo-list li::after {
     display: block;
     content: "";
     width: 50px;
@@ -232,17 +234,17 @@ header .weather-box #weather span:nth-child(2) img {
     opacity: 20%;
 }
 
-#todo-list li:nth-child(2n -1)::after{
+#todo-list li:nth-child(2n -1)::after {
     background-image: url(../img/li-img01.png);
 }
 
-#todo-list li:nth-child(2n)::after{
+#todo-list li:nth-child(2n)::after {
     background-image: url(../img/li-img02.png);
 }
 
 #todo-list li p {
-    font-family: NanumSquareRound;
-    font-size: 2.0rem;
+    font-family: InkLipquid;
+    font-size: 3.0rem;
 }
 
 #todo-list li button {
@@ -322,9 +324,9 @@ header .weather-box #weather span:nth-child(2) img {
     }
 
     #todo-list li p {
-        font-size: 2.2rem;
+        font-size: 3.3rem;
     }
-    
+
     #todo-list li button {
         font-size: 1.3rem;
     }
@@ -341,12 +343,18 @@ header .weather-box #weather span:nth-child(2) img {
 
     /*background 시작*/
 
+    .background .img-box {
+        animation: bgAnimation 30s infinite alternate;
+    }
 
-.background .img-box img {
-    animation: none;
-}
+    .background .img-box img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        animation: none;
+    }
 
-/*background 끝*/
+    /*background 끝*/
 
     /*dim-section 시작*/
     header {
@@ -399,20 +407,20 @@ header .weather-box #weather span:nth-child(2) img {
 
     /*dim-section 끝*/
 
-        /*todo-section 시작*/
-        #todo-list {
-            padding: 40px 20px;
-        }
+    /*todo-section 시작*/
+    #todo-list {
+        padding: 40px 20px;
+    }
 
-        #todo-list li p {
-            font-size: 2.5rem;
-        }
-        
-        #todo-list li button {
-            font-size: 1.4rem;
-        }
-    
-        /*todo-section 끝*/
+    #todo-list li p {
+        font-size: 3.5rem;
+    }
+
+    #todo-list li button {
+        font-size: 1.4rem;
+    }
+
+    /*todo-section 끝*/
 }
 
 /*PC 1024px 끝*/
@@ -459,6 +467,7 @@ header .weather-box #weather span:nth-child(2) img {
     #todo-list li:nth-child(5n) {
         margin-bottom: 150px;
     }
+
     /*todo-section 끝*/
 }
 
