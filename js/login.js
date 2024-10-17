@@ -29,12 +29,12 @@ function deletGreeting() {
 
 function paintGreetings(username) {
     const userNameGet = localStorage.getItem(USERNAME_KEY)
-    const userNameText = userNameGet
+    const userNameText = userNameGet.replace(/"/g, '')
     greeting.querySelector("p span:last-child").innerText = userNameText;
     greeting.classList.remove(HIDDEN_CLASSNAME);
     todoForm.classList.remove(HIDDEN_CLASSNAME);
     const button = document.createElement("button");
-    button.innerText = `저는 ${userNameGet}(이)가 아닙니다.`
+    button.innerText = `저는 ${userNameText}(이)가 아닙니다.`
     greeting.appendChild(button)
     button.addEventListener("click", deletGreeting)
 }

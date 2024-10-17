@@ -4,6 +4,9 @@ const toDoList = document.querySelector("#todo-list");
 
 const TODOS_KEY = "todos";
 
+const savedToDos = localStorage.getItem(TODOS_KEY)
+const parsedToDos = JSON.parse(savedToDos);
+
 let toDos = [];
 
 function saveToDos() {
@@ -20,13 +23,23 @@ function deleteToDo(event) {
 function paintToDo(newTodo){
     const li = document.createElement("li");
     li.id = newTodo.id;
-    const span = document.createElement("span");
-    span.innerText = newTodo.text;
+    const p = document.createElement("p");
+    p.innerText = newTodo.text;
     const button = document.createElement("button");
     button.innerText = "닫기"
-    button.addEventListener("click", deleteToDo)
-    li.appendChild(span);
+    button.addEventListener("click", deleteToDo);
+    const date = new Date();
+    const yearText = String(date.getFullYear()).padStart(4, "0")
+    const monthText = String(date.getMonth()).padStart(2, "0")
+    const dateText = String(date.getDate()).padStart(2, "0")
+    const hoursText = String(date.getHours()).padStart(2, "0")
+    const minutesText = String(date.getMinutes()).padStart(2, "0")
+    let timeStmapText = `${yearText}.${monthText}.${dateText} / ${hoursText}:${minutesText}`
+    const span = document.createElement("span")
+    span.innerText = timeStmapText
+    li.appendChild(p);
     li.appendChild(button);
+    li.appendChild(span);
     toDoList.appendChild(li);
 
 };
@@ -36,8 +49,9 @@ function handleToDoSubmit(event) {
     const newTodo = toDoInput.value;
     toDoInput.value = "";
     const newTodoObj = {
+        id: Date.now(),
         text:newTodo,
-        id: Date.now()
+        name:userNameText,
     }
     toDos.push(newTodoObj);
     paintToDo(newTodoObj);
@@ -50,10 +64,9 @@ function sayHello(item) {
     console.log("this is the turn of", item)
 }
 
-const savedToDos = localStorage.getItem(TODOS_KEY)
+
 
 if(savedToDos !== null){
-    const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
 }
