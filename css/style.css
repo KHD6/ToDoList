@@ -21,6 +21,7 @@
 .background .img-box {
     height: 100%;
     position: relative;
+    animation: bgAnimation 30s infinite alternate ease-in-out;
 }
 
 .background .img-box img {
@@ -29,6 +30,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: bgMoveAnimation 100s infinite alternate;
 }
 
 /*background 끝*/
@@ -336,6 +338,15 @@ header .weather-box #weather span:nth-child(2) img {
 
 /*PC 1024px 시작*/
 @media screen and (min-width: 1024px) {
+
+    /*background 시작*/
+
+
+.background .img-box img {
+    animation: none;
+}
+
+/*background 끝*/
 
     /*dim-section 시작*/
     header {
