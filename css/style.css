@@ -107,7 +107,7 @@ header .weather-box #weather span:nth-child(2) img {
     box-shadow: 7px 10px 10px 1px rgba(0, 0, 0, 100);
     transition: all 0.2s;
     font-family: HakgyoansimPuzzleTTF-Black;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
 }
 
 .form-box input::placeholder {
