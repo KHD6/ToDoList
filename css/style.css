@@ -37,7 +37,7 @@
 
 /*dim-section 시작*/
 #dim-section {
-    height: 65vh;
+    height: 75vh;
     min-height: 500px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -58,14 +58,30 @@ header {
     line-height: 50px;
     -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 100);
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 100);
+    text-wrap: nowrap;
 }
 
 header h1 {
+    font-family: HakgyoansimPuzzleTTF-Black;
     font-size: 2.0rem;
 }
 
 header>div {
     font-size: 1.4rem;
+}
+
+header .clock-box{
+    font-family: TTTogether;
+    letter-spacing: 5px;
+}
+
+header .weather-box{
+    font-family: NanumSquareRound;
+}
+
+header .weather-box #weather span:nth-child(2) img{
+    width: 40px;
+    vertical-align: middle;
 }
 
 .form-box {
@@ -88,6 +104,8 @@ header>div {
     -webkit-box-shadow: 7px 15px 10px 1px rgba(0, 0, 0, 100);
     box-shadow: 7px 10px 15px 1px rgba(0, 0, 0, 100);
     transition: all 0.2s;
+    font-family: HakgyoansimPuzzleTTF-Black;
+    letter-spacing: 1px;
 }
 
 .form-box input::placeholder {
@@ -112,6 +130,8 @@ header>div {
     border-radius: 50%;
     -webkit-box-shadow: 7px 15px 10px 1px rgba(0, 0, 0, 100);
     box-shadow: 7px 10px 15px 1px rgba(0, 0, 0, 100);
+    font-family: HakgyoansimPuzzleTTF-Black;
+    letter-spacing: 1px;
 }
 
 .form-box button:hover {
@@ -122,11 +142,14 @@ header>div {
 .form-box #greeting p{
     padding-top: 30px;
     font-size: 3.0rem;
+    font-family: TTTogether;
 }
 
 .form-box #greeting p span:last-child{
     display: block;
     text-align: right;
+    font-family: MYArirang-Medium;
+    font-size: 5.0rem;
 
 }
 
@@ -136,6 +159,7 @@ header>div {
     font-size: 1.2rem;
     border-bottom: 2px solid transparent;
     border-radius: 10px;
+    opacity: 75%;
     -webkit-box-shadow: none;
     box-shadow: none;
     text-wrap: nowrap;
@@ -143,6 +167,7 @@ header>div {
 
 .form-box #greeting button:hover {
     border-bottom: 1px solid #fff;
+    opacity: 100%;
     transform: translateY(-5%);
 }
 
@@ -153,17 +178,19 @@ header>div {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    font-family: MYArirang-Medium;
 }
 
 #quote span:first-child{
-    font-size: 1.5rem;
-    line-height: 1.2rem;
+    font-size: 2.5rem;
+    line-height: 1.5rem;
 }
 
 #quote span:last-child{
     display: block;
-    margin-top: 12px;
-    font-size: 1.2rem;
+    margin-top: 15px;
+    font-size: 2.0rem;
+    font-weight: bold;
 }
 
 /*dim-section 끝*/
@@ -199,6 +226,15 @@ header>div {
         font-size: 2.0rem;
     }
 
+    .form-box #greeting p{
+        font-size: 3.4rem;
+    }
+    
+    .form-box #greeting p span:last-child{
+        font-size: 5.5rem;
+    
+    }
+
     /*dim-section 끝*/
 
     /*todo-section 시작*/
@@ -231,6 +267,10 @@ header>div {
         font-size: 2.0rem;
     }
 
+    header .weather-box #weather span:nth-child(2) img{
+        width: 50px;
+    }
+
     .form-box input {
         width: 350px;
         height: 100px;
@@ -240,6 +280,26 @@ header>div {
     .form-box button {
         font-size: 2.4rem;
     }
+
+    .form-box #greeting p{
+        font-size: 3.6rem;
+    }
+    
+    .form-box #greeting p span:last-child{
+        font-size: 6.0rem;
+    
+    }
+
+    #quote span:first-child{
+        font-size: 3.0rem;
+        line-height: 1.6rem;
+    }
+    
+    #quote span:last-child{
+        margin-top: 20px;
+        font-size: 2.5rem;
+    }
+    
 
     /*dim-section 끝*/
 }
@@ -260,6 +320,15 @@ header>div {
 
     .form-box button {
         font-size: 2.6rem;
+    }
+
+    .form-box #greeting p{
+        font-size: 4.0rem;
+    }
+    
+    .form-box #greeting p span:last-child{
+        font-size: 7.0rem;
+    
     }
 
     /*dim-section 끝*/

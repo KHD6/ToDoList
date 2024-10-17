@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 html{font-size: 10px;}
-body{text-align: left;font-size:1.6rem;color:#000;line-height:1.4;font-family:'Line Seed KR', sans-serif;font-weight:400;background-color:#fff}
+body{text-align: left;font-size:1.6rem;color:#000;line-height:1.4;font-weight:400;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,span,form,fieldset,p,button,address,table, tbody, tfoot, thead, th, tr, td, video {margin:0;padding:0;box-sizing: border-box;}
 header,article,aside,canvas,details,figcaption,figure,footer,hgroup,menu,nav,section,summary,mark {display:block;margin: 0; padding: 0;box-sizing: border-box;}
 h1,h2,h3,h4,h5,h6{box-sizing: border-box;}
@@ -10,7 +10,7 @@ input,button,textarea,select{border-radius:0; box-sizing: border-box;}
 select{min-height: 3.5rem;}
 img,fieldset,iframe{border:0;}
 li{list-style:none}
-img,input,select,button,textarea{vertical-align:top; box-sizing: border-box; font-family:'Line Seed KR', sans-serif;}
+img,input,select,button,textarea{vertical-align:top; box-sizing: border-box;}
 input[type=radio]{border-radius:0px 0px; -webkit-border-radius: 50%;}
 input[type=radio]:checked{background-color:#363636;}
 img{max-width:100%}

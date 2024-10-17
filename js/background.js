@@ -9,7 +9,6 @@ const chosenImgage = images[Math.floor(Math.random() * images.length)];
 const bgImage = document.createElement("img");
 
 bgImage.src = `img/${chosenImgage}`
-bgImage.classList.add("test")
 
 const imgBox = document.querySelector(".img-box")
 
