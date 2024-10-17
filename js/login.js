@@ -1,6 +1,7 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
+const todoForm = document.querySelector("#todo-form");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -21,15 +22,17 @@ function onLoginSubmit(event) {
 function deletGreeting() {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     greeting.classList.add(HIDDEN_CLASSNAME);
+    todoForm.classList.add(HIDDEN_CLASSNAME);
     localStorage.setItem(USERNAME_KEY, "");
     greeting.querySelector("button").remove();
 }
 
 function paintGreetings(username) {
     const userNameGet = localStorage.getItem(USERNAME_KEY)
-    const userNameText = `Hello ${userNameGet}`
-    greeting.querySelector("p").innerText = userNameText;
+    const userNameText = userNameGet
+    greeting.querySelector("p span:last-child").innerText = userNameText;
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    todoForm.classList.remove(HIDDEN_CLASSNAME);
     const button = document.createElement("button");
     button.innerText = `저는 ${userNameGet}(이)가 아닙니다.`
     greeting.appendChild(button)

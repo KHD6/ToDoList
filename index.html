@@ -4,32 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/import.css">
     <title>To Do List</title>
 </head>
 
 <body>
-    <h2 id="clock">00:00</h2>
-    <form id="login-form" class="hidden">
-        <input required maxlength="15" type="text" placeholder="what is your name?">
-        <button>Log In</button>
-    </form>
-    <div id="greeting" class="hidden">
-        <p></p>
-    </div>
-    <form id="todo-form">
-        <input type="text" placeholder="write a To Do and begin doing. Walt Disney">
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-        <span></span>
-        <span></span>
-    </div>
-    <div id="weather">
-        <span></span>
-        <span></span>
-    </div>
-    <div class="img-box"></div>
+    <div id="wrap">
+        <div class="background">
+            <div class="img-box"></div>
+        </div><!--.bg-->
+        
+        <section id="dim-section">
+            <header>
+                <h1>To Do List</h1>
+                <div class="clock-box">
+                    <p id="clock"></p>
+                </div><!--.clock-box-->
+                <div class="weather-box">
+                    <div id="weather">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div><!--.weather-box-->
+            </header>
+
+            <div class="form-box">
+                <form id="login-form" class="hidden">
+                    <input required maxlength="15" type="text" placeholder="당신의 이름을 입력해주세요.">
+                    <button>Log In</button>
+                </form>
+                <div id="greeting" class="hidden">
+                    <p>
+                        <span>반갑습니다!</span>
+                        <span></span>
+                    </p>
+                </div>
+                <form id="todo-form" class="hidden">
+                    <input type="text" placeholder="일정을 입력해주세요.">
+                    <button>추가</button>
+                </form>
+            </div><!--.form-box-->
+
+            <div id="quote">
+                <span></span>
+                <span></span>
+            </div>
+        </section><!--#dim-section-->
+
+        <section id="todo-section">
+            <ul id="todo-list"></ul>
+        </section><!--#todo-section-->
+    </div><!--#wrap-->
+
+
+
+    
+
+
+
+
+
     <script src="js/login.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>

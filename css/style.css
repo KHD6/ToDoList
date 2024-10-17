@@ -1,18 +1,268 @@
-img{
-    max-width: 100%;
-}
-
-
+/*class 세팅 시작*/
 .hidden {
     display: none;
 }
 
-body {
-    background-color: antiquewhite;
+/*class 세팅 끝*/
+
+
+
+/*모바일 시작*/
+
+/*background 시작*/
+.background {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-.img-box {
-    width: 500px;
-    height: 500px;
+.background .img-box {
+    height: 100%;
+    position: relative;
+}
+
+.background .img-box img {
+    max-width: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*background 끝*/
+
+/*dim-section 시작*/
+#dim-section {
+    height: 65vh;
+    min-height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: relative;
     overflow: hidden;
 }
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 100);
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 100);
+}
+
+header h1 {
+    font-size: 2.0rem;
+}
+
+header>div {
+    font-size: 1.4rem;
+}
+
+.form-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-box input {
+    width: 300px;
+    height: 50px;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    -webkit-box-shadow: 7px 15px 10px 1px rgba(0, 0, 0, 100);
+    box-shadow: 7px 10px 15px 1px rgba(0, 0, 0, 100);
+    transition: all 0.2s;
+}
+
+.form-box input::placeholder {
+    color: #fff;
+}
+
+.form-box input:focus,
+.form-box input:hover{
+    border-bottom: 2px solid #fff;
+    transform: translateY(-5%);
+}
+
+.form-box button {
+    display: block;
+    padding: 10px 15px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.6rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    -webkit-box-shadow: 7px 15px 10px 1px rgba(0, 0, 0, 100);
+    box-shadow: 7px 10px 15px 1px rgba(0, 0, 0, 100);
+}
+
+.form-box button:hover {
+    border-bottom: 2px solid #fff;
+    transform: translateY(-5%);
+}
+
+.form-box #greeting p{
+    padding-top: 30px;
+    font-size: 3.0rem;
+}
+
+.form-box #greeting p span:last-child{
+    display: block;
+    text-align: right;
+
+}
+
+.form-box #greeting button {
+    padding: 5px 8px;
+    margin: 7px 0 50px auto;
+    font-size: 1.2rem;
+    border-bottom: 2px solid transparent;
+    border-radius: 10px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-wrap: nowrap;
+}
+
+.form-box #greeting button:hover {
+    border-bottom: 1px solid #fff;
+    transform: translateY(-5%);
+}
+
+#quote {
+    position: absolute;
+    width: calc(100% - 20px);
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#quote span:first-child{
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+}
+
+#quote span:last-child{
+    display: block;
+    margin-top: 12px;
+    font-size: 1.2rem;
+}
+
+/*dim-section 끝*/
+
+/*모바일 끝*/
+
+/*패드 시작*/
+@media screen and (min-width: 768px) {
+
+    #wrap {
+        display: flex;
+    }
+
+    /*dim-section 시작*/
+    #dim-section {
+        width: 50vw;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header>div {
+        font-size: 1.6rem;
+    }
+
+    .form-box input {
+        margin-bottom: 50px;
+        font-size: 2.0rem;
+    }
+
+    /*dim-section 끝*/
+
+    /*todo-section 시작*/
+    #todo-section {
+        width: 50%;
+    }
+
+    /*todo-section 끝*/
+}
+
+/*패드 끝*/
+
+
+
+/*PC 1024px 시작*/
+@media screen and (min-width: 1024px) {
+
+    /*dim-section 시작*/
+    header {
+        height: 60px;
+        padding: 0 10px;
+        line-height: 60px;
+    }
+
+    header h1 {
+        font-size: 2.6rem;
+    }
+
+    header>div {
+        font-size: 2.0rem;
+    }
+
+    .form-box input {
+        width: 350px;
+        height: 100px;
+        font-size: 2.6rem;
+    }
+
+    .form-box button {
+        font-size: 2.4rem;
+    }
+
+    /*dim-section 끝*/
+}
+
+/*PC 1024px 끝*/
+
+
+
+/*PC 1440px 시작*/
+@media screen and (min-width: 1440px) {
+
+    /*dim-section 시작*/
+    .form-box input {
+        width: 400px;
+        height: 120px;
+        font-size: 2.8rem;
+    }
+
+    .form-box button {
+        font-size: 2.6rem;
+    }
+
+    /*dim-section 끝*/
+}
+
+/*PC 1440px 끝*/
