@@ -49,12 +49,6 @@ function handleToDoSubmit(event) {
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
-function sayHello(item) {
-    console.log("this is the turn of", item)
-}
-
-
-
 if (savedToDos !== null) {
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
